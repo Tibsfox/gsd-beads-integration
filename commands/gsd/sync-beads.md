@@ -6,14 +6,19 @@ allowed-tools: [Read, Write, Bash, Glob]
 ---
 
 <objective>
-Synchronize GSD planning artifacts to Beads issues. Creates/updates Beads epic for the milestone and tasks for each phase. One-way sync (GSD → Beads), idempotent, non-destructive.
+Synchronize GSD planning artifacts to Beads issues.
+  
+- Creates/updates Beads epic for the milestone and tasks for each phase.
+- One-way sync (GSD → Beads), idempotent, non-destructive.
 </objective>
 
 <prerequisites>
 Before running, verify:
+  
 1. `bd` CLI is available: `which bd`
 2. Beads is initialized: `.beads/` directory exists (run `bd init --quiet` if not)
 3. GSD project exists: `.planning/ROADMAP.md` exists
+   
 </prerequisites>
 
 <instructions>
@@ -204,9 +209,7 @@ Ready work:
   bd ready --label gsd:phase
 ```
 
-</instructions>
-
-<error_handling>
+## 9. Error Handling
 
 **bd command fails:**
 - Run `bd doctor` to check setup
@@ -221,13 +224,12 @@ Ready work:
 - Safe to re-run. Matches by `gsd:phase-N` label, not title.
 - Won't create duplicates.
 
-</error_handling>
 
-<notes>
+## 10. notes
 
 **Additive only:** Never deletes Beads issues. Never modifies GSD files.
 
-**Idempotent:** Running multiple times is safe.
+**Idempotent:** An action which, when performed multiple times, has no further effect on its subject after the first time it is performed. Running multiple times is safe. 
 
 **Labels used:**
 - `gsd:milestone` — The milestone epic
@@ -240,5 +242,3 @@ Ready work:
 bd create "Found bug" -t bug -p 1 -l "gsd:discovered" --json
 bd dep add $NEW_ID $PARENT_ID --type discovered-from
 ```
-
-</notes>
