@@ -107,9 +107,6 @@ gsd-beads-integration/
 |------|---------|
 | GSD | v1.9+ |
 | Beads | v0.20+ |
-| beads-ui | ✅ Works unchanged |
-| bdui | ✅ Works unchanged |
-| vscode-beads | ✅ Works unchanged |
 
 ## License
 
