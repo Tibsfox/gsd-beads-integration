@@ -1,0 +1,45 @@
+{
+  "_comment": "Merge this into your ~/.claude/settings.json",
+  
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/gsd-beads-session-start.sh"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command", 
+            "command": "bd prime 2>/dev/null || true"
+          }
+        ]
+      }
+    ]
+  },
+  
+  "permissions": {
+    "allow": [
+      "Bash(bd:*)",
+      "Bash(bd init:*)",
+      "Bash(bd create:*)",
+      "Bash(bd update:*)",
+      "Bash(bd close:*)",
+      "Bash(bd ready:*)",
+      "Bash(bd list:*)",
+      "Bash(bd show:*)",
+      "Bash(bd dep:*)",
+      "Bash(bd sync:*)",
+      "Bash(bd prime:*)",
+      "Bash(bd doctor:*)"
+    ]
+  }
+}
