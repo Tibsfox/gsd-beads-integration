@@ -1,6 +1,10 @@
 # GSD + Beads Integration
 
-A minimal integration layer that makes [Beads](https://github.com/steveyegge/beads) work seamlessly with [Get Shit Done (GSD)](https://github.com/glittercowboy/get-shit-done).
+A minimal integration layer that makes [Get Shit Done (GSD)](https://github.com/glittercowboy/get-shit-done) work seamlessly with [Beads](https://github.com/steveyegge/beads).
+
+Two amazing tools that put togehter with your imagination can do amazing things.
+If anything, this is just trying to help bring visability to two amazing projects.
+If all you do is learn about them then this project has served it's purpose.
 
 **GSD owns planning. Beads owns tracking. This layer bridges them.**
 
@@ -8,7 +12,7 @@ A minimal integration layer that makes [Beads](https://github.com/steveyegge/bea
 
 - `/gsd:sync-beads` — Sync your GSD roadmap to Beads issues
 - Automatic `bd prime` context injection at session start
-- Full compatibility with beads-ui, bdui, vscode-beads, and all Beads ecosystem tools
+- Full compatibility with beads ecosystem tools
 
 ## Prerequisites
 
